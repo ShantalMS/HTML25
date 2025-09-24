@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: #111;
+    color: #fff;
+    cursor: none;
+}
+
+/* Contenedor del efecto */
+.container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    padding-top: 20vh;
+    text-align: center;
+    overflow: visible;
+}
+
+/* Texto blur y focus */
+.blur, .focus {
+    position: absolute;
+    width: 100%;
+    font-family: 'Overpass', sans-serif;
+    font-size: 64px;
+    letter-spacing: 15px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.blur {
+    color: rgba(255,255,255,0.2);
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.focus {
+    color: #ff8adf;
+    filter: blur(0);
+    z-index: 2;
+}
+
+/* Hover y bits */
+.hover {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Bits triangulares */
+.bit-top, .bit-top-left, .bit-top-right, .bit-top-right-2,
+.bit-bottom-left, .bit-bottom-left-2, .bit-bottom-right, .bit-bottom-right-2 {
+    position: absolute;
+    background: #ff8adf;
+}
+
+/* Ajuste de capas laterales para efecto */
+.left-side, .right-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* semitransparente */
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: lighten; /* permite ver el título */
+}
+
+/* Branding */
+.branding {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 56px;
+    line-height: 0;
+    z-index: 5;
+}
